@@ -5,7 +5,7 @@ function GerarQRcode(){
     document.getElementById('txtQrcode').innerHTML = document.querySelector('textarea').value;
 
     //Api gerador de QR-code Google
-    var APIqrcode = 'https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=';
+    var APIqrcode = 'https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=';
 
     var conteudoQRcode = APIqrcode + encodeURIComponent(inputUser);
 
