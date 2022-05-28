@@ -2,19 +2,80 @@
 <html lang="pt-br">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador QR-code</title>
+
+    <link rel="stylesheet" href="../Qr-code-generator/css/style.css">
 </head>
 
-<body>
+<body style="margin: 0; background-color:rgb(216, 216, 216);">
 
-    <textarea maxlength="256" rows="10"></textarea>
-    <button onclick="GerarQRcode()">Criar QR-code</button>
-    <img src="" alt="" id="QRCodeImage">
+    <div id="container">
+
+        <div class="navbar">
+
+            <div class="logo">
+                <label class="expo">EXPO QR-CODE</label>
+            </div>
+
+
+        </div>
+
+        <div class="box-principal">
+
+            <div class="text-area">
+
+                <textarea maxlength="256" rows="10" id="txtinput" placeholder="Insira o texto aqui"></textarea>
+                <button onclick="GerarQRcode()" class="bttn-gerar">Criar QR-code</button>
+
+                <div class="media">
+
+                    <div id="lin">
+                        <a href="https://www.kaspersky.com.br/resource-center/definitions/what-is-a-qr-code-how-to-scan" id="signi_qrcode">Oque é QR-Code?</a>
+                        <hr>
+                        <div id="icons">
+                            <label id="conect"> Conecte-se:</label>
+                            <br>
+                            <a href="https://github.com/Felipesants" style="margin-left: 0;"><img src="icons\icons8-github.svg"/></a>
+                            <a href="https://www.instagram.com/felipe_cwb2/"><img src="icons\icons8-instagram.svg"></a>
+                            <a href=""><img src="icons\icons8-linkedin-circundado.svg"></a>
+                            <a href=""><img src="icons\icons8-logo-discord-60.svg"></a>
+                        </div>
+
+                    </div>
+                    
+                </div>  
+
+            </div>
+
+            
+
+            <div class="qr_image_dowload">
+
+                    <label class="expo_card">EXPO QR-CODE</label>
+
+                    <div class="txtQRcode">
+                    <label  id="txtQrcode"></label>
+                    </div>
+
+                    <div class="imgQR">
+                    <img src="" alt="" id="QRCodeImage">
+                    </div>
+
+            </div>  
+
+        </div>
+
+
+    </div>
+    
+
 
     <script src="./js/script.js"></script>
+
 </body>
 
 </html>
