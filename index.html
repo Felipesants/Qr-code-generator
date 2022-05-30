@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="../Qr-code-generator/css/style.css">
 </head>
 
-<body style="margin: 0; background-color:rgb(216, 216, 216);">
+<body class="body">
 
-    <div id="container">
+    <div id="container" class="container">
 
         <div class="navbar">
 
@@ -21,11 +21,11 @@
                 <label class="expo">EXPO QR-CODE</label>
             </div>
 
-
         </div>
 
         <div class="box-principal">
 
+            <!--box esquerdo com solicitação do valor a ser gerado e mídias-->
             <div class="text-area">
 
                 <textarea maxlength="256" rows="10" id="txtinput" placeholder="Insira o texto aqui"></textarea>
@@ -49,13 +49,22 @@
                     
                 </div>  
 
+
             </div>
 
-            
-
+            <!--box lateral direita com os valores gerados-->
             <div class="qr_image_dowload">
 
-                    <label class="expo_card">EXPO QR-CODE</label>
+            
+                <div id="dados" class="dados">
+
+                    <div style="display:inline-block;">
+                    <label class="expo_card" id="expo_card">EXPO QR-CODE</label>
+                    </div>
+
+                    <div class="div_icon">
+                    <img src="../Qr-code-generator/icons/icons8-impressão-60.png" alt="" onclick="GerarPDF()" class="icon_impressora">
+                    </div>
 
                     <div class="txtQRcode">
                     <label  id="txtQrcode"></label>
@@ -65,14 +74,34 @@
                     <img src="" alt="" id="QRCodeImage">
                     </div>
 
+                </div>
+                
+
             </div>  
 
         </div>
 
+        
 
     </div>
     
+        <!--Campos que recebram os valores para emissão do PDF-->
+        <div class="print">
+            <span id="Expo_print"></span>
+            
+            <hr>
 
+            <div style="text-align:center; margin-top: 8%; background-color: rgb(133, 133, 133);">
+            <span id="Txt_print"></span>
+            </div>
+
+            <br>
+
+            <div id="img_pdf" >
+            <img src="" alt="" id="img_print">
+            </div>
+
+        </div>
 
     <script src="./js/script.js"></script>
 

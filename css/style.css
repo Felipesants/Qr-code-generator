@@ -4,6 +4,11 @@
 }
 
 
+.body{
+
+    margin: 0; background-color:rgb(216, 216, 216);
+}
+
 .navbar{
 
     width: 100%;
@@ -27,7 +32,7 @@
     color: #ffff;
     font-size: 50px;
     line-height: 80px;
-    padding: 0 70px;
+    padding: 0 40px;
 
 }
 
@@ -42,6 +47,9 @@
 
 }
 
+
+/*box principal*/
+
 .box-principal{
 
     width: 60%;
@@ -54,6 +62,8 @@
 
 }
 
+
+/*box container do conteudo*/
 .text-area{
 
     width: 60%;
@@ -66,6 +76,7 @@
 
 }
 
+/*campo para texto que sera gerado o qr-code*/
 #txtinput{
 
     
@@ -95,7 +106,7 @@
 
 
 
-
+/*box divisão direita no interior do box principal*/
 .qr_image_dowload{
 
     width: 36%;
@@ -106,6 +117,7 @@
 
 }
 
+/*imagem retornada da requisição API Google*/
 #QRCodeImage{
 
     position: absolute;
@@ -133,7 +145,7 @@
 }
 
 
-
+/*texto utilizado para gerar qr-code*/
 #txtQrcode{
 
     font-family: 'Lato', sans-serif;
@@ -141,7 +153,7 @@
    
 }
 
-
+/*box alinhamento componentes dados*/
 .imgQR{
 
     margin-top: 2%;
@@ -151,14 +163,19 @@
 .txtQRcode{
 
     margin-top: 12%;
-    margin-left: 20%;
-    background-color: rgb(202, 202, 202);
-    width: 60%;
+    width: 100%;
     text-align: center;
 }
 
 
+/*botão que gerará o qr-code do box dados*/
+.bttnPDF{
 
+   margin-left: 15%;
+}
+
+
+/*Box com icones e links das redes sociais*/
 .media{
     
     height:30%;
@@ -190,6 +207,7 @@
     margin-left: 10%;
 }
 
+/*link curiosidade*/
 #signi_qrcode{
 
     font-size: 20px;
@@ -207,6 +225,87 @@
     font-size: 20px;
     font-family: Fantasy;
     color: rgb(134, 134, 134);
+}
+
+
+/*icone impressora*/
+
+
+.div_icon{
+
+    display: inline-block;
+    width: 36%;
+
+}
+
+.icon_impressora{
+
+    margin-left: 50%;
+    margin-top: 2%;
+    cursor: pointer;
+    
+}
+
+
+/*estilização PDF*/
+.print{
+
+    width: 50%;
+    height: 500px;
+    margin-top: 3%;
+    border-radius: 5px;
+
+}
+
+#Expo_print{
+
+    font-family: 'DNY';
+    color: rgb(110, 110, 110);
+    font-size: 40px;
+    line-height: 80px;
+    margin: 0 10px;
+
+}
+
+#Txt_print{
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    color: #ffff;
+
+}
+
+#img_print{
+
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#img_pdf{
+
+    display:flex;
+    display: -webkit-flex; /* Garante compatibilidade com navegador Safari. */
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+@media print{
+
+    .print{
+        display: block;
+        background-color: rgb(197, 197, 197);
+    }
+
+    .container{
+        display: none;
+    }
+
+    .body{
+        background-color: #ffff;
+    }
 }
 
 
